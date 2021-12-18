@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace eTickets.Models
 {
-    public class Producer
+    public class Cinema
     {
         [Key]
-        public int ProducerId { get; set; }
-
-        public string ProfilePrictureURL { get; set; }
-        public string FullName { get; set; }
-        public string Bio { get; set; }
+        public int CinemaId { get; set; }
+        public string Logo { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
 
         //Relationship
         public List<Movies> Movies { get; set; }
+
     }
 }

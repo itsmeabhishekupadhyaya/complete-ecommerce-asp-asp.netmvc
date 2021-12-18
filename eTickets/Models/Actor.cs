@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace eTickets.Models
 {
     public class Actor
+
     {
-        public string ImageURL { get; set; }
-        public string Name { get; set; }
-        public int MyProperty { get; set; }
+        [Key]
+        public int ActorId { get; set; }
+
+        public string ProfilePrictureURL { get; set; }
+        public string FullName { get; set; }
+        public string Bio { get; set; }
+
+        //Relationship
+        public List<Actor_Movie> Actor_Movies { get; set; }
     }
 }
